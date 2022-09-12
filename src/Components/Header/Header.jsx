@@ -41,11 +41,13 @@ export const Header = () => {
         header.style.background = "rgba(2, 2, 120, 0.8)";
         links.forEach((link) => {
           link.style.color = "white";
+          link.style.fontWeight = "400";
         });
       } else {
         header.style.backgroundColor = "transparent";
         links.forEach((link) => {
           link.style.color = "black";
+          link.style.fontWeight = "600";
         });
       }
     });
