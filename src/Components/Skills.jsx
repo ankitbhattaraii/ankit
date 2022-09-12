@@ -27,7 +27,7 @@ let data = [
 const Skills = () => {
   return (
     <div className="skills flex-al-jc-center ">
-      <h1>My weapons</h1>
+      <h1>Expertise</h1>
       <div className="skills-images flex-al-jc-center">
         {data.map((skill) => {
           return <img src={skill.path} alt={skill.name} key={skill.name} />;

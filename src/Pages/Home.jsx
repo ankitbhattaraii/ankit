@@ -1,7 +1,7 @@
 import React from "react";
 import Typewriter from "typewriter-effect";
 import Footer from "../Components/Footer";
-import { DP, Skills, Header, ProjectSection } from "../Globals/Imports";
+import { DP, Skills, Header } from "../Globals/Imports";
 import "../styles/Home.css";
 
 export const Home = () => {

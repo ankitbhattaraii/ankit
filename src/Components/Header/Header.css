@@ -4,8 +4,8 @@
   justify-content: flex-end;
   padding: 1rem 10rem;
   position: fixed;
-
-  /* background-color: #424141; */
+  transition: 0.2s ease-in;
+  z-index: 999;
 }
 
 .links {
@@ -27,10 +27,20 @@
   background-color: rgba(0, 0, 0, 0.1);
 }
 
+.header.scroll {
+  background-color: #c5c0c0;
+  color: white;
+}
+
+.scroll .links a {
+  color: white;
+}
+
 .header svg {
   cursor: pointer;
   margin: 0 1rem;
   background-color: #cfcccc;
+
   padding: 5px 6px;
   font-size: 4rem;
   border-radius: 0.5rem;
@@ -59,7 +69,6 @@
   .header svg.bars {
     display: block;
     font-size: 3rem;
-    background: rgba(0, 0, 0, 0.1);
   }
 
   .links {
@@ -69,14 +78,14 @@
     flex-direction: column;
     top: -50rem;
     justify-content: flex-start;
-    background: rgba(0, 0, 0, 0.3);
-    background-color: rgb(2, 2, 120);
+    background: rgba(107, 50, 50, 0.3);
     background-color: rgba(2, 2, 120, 0.8);
     filter: blur(0.1px);
     -webkit-filter: blur(0.1px);
     z-index: 99;
     right: 0%;
     transition: 0.2s ease-in;
+    padding: 2rem 0;
   }
 
   .links a {

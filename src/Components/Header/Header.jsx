@@ -1,11 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, HiLightBulb, FaBars } from "../../Globals/Imports";
 
 import "./Header.css";
 
 export const Header = () => {
   const [toggler, settoggler] = useState(false);
-  // const [header, setHeader] = useState(false);
 
   const handleOnClick = () => {
     console.log("dark mode enabled");
@@ -34,28 +33,23 @@ export const Header = () => {
     },
   ];
 
-  // const header = document.getElementById("header");
-
-  // window.addEventListener("scroll", () => {
-  //   if (window.scrollY >= 200) {
-  //     // console.log("hy");
-  //     header.style.backgroundColor = "blue";
-  //   } else {
-  //     header.style.backgroundColor = "transparent";
-  //   }
-  // });
-
-  // style={window.addEventListener("scroll", () => {
-  //   if (window.pageYOffset >= 100) {
-  //     return {
-  //       backgroundColor: "blue",
-  //     };
-  //   } else {
-  //     return {
-  //       backgroundColor: "transparent",
-  //     };
-  //   }
-  // })}
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      const header = document.getElementById("header");
+      const links = document.querySelectorAll(".links a");
+      if (window.scrollY >= 200) {
+        header.style.background = "rgba(2, 2, 120, 0.8)";
+        links.forEach((link) => {
+          link.style.color = "white";
+        });
+      } else {
+        header.style.backgroundColor = "transparent";
+        links.forEach((link) => {
+          link.style.color = "black";
+        });
+      }
+    });
+  }, []);
 
   return (
     <>
