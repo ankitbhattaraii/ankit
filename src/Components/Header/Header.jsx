@@ -15,6 +15,10 @@ export const Header = () => {
     }
   });
 
+  const LinksClicked = () => {
+    settoggler(!toggler);
+  };
+
   const handleOnClick = () => {
     console.log("dark mode enabled");
   };
@@ -61,7 +65,7 @@ export const Header = () => {
         >
           {data.map((links) => {
             return (
-              <Link to={links.path} key={links.link}>
+              <Link to={links.path} key={links.link} onClick={LinksClicked}>
                 {links.link}
               </Link>
             );
