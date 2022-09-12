@@ -1,0 +1,10 @@
+.recent-work {
+  height: 100vh;
+  background-color: blueviolet;
+}
+
+@media (max-width: 550px) {
+  .recent-work {
+    height: 65rem;
+  }
+}
