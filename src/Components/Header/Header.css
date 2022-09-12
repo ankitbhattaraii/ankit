@@ -8,6 +8,24 @@
   z-index: 999;
 }
 
+.header.changed-bg {
+  background: rgb(46 46 144 / 80%);
+  animation: scrollho linear 0.2s;
+}
+
+@keyframes scrollho {
+  0% {
+    height: 70px;
+  }
+  100% {
+    height: 80px;
+  }
+}
+
+.header.changed-bg .links a {
+  color: white;
+}
+
 .links {
   list-style: none;
 }
@@ -40,7 +58,6 @@
   cursor: pointer;
   margin: 0 1rem;
   background-color: #cfcccc;
-
   padding: 5px 6px;
   font-size: 4rem;
   border-radius: 0.5rem;
@@ -48,7 +65,8 @@
 }
 
 .header svg:hover {
-  background: rgba(0, 0, 0, 0.3);
+  /* background: rgba(198, 196, 196, 0.2); */
+  background-color: #b6b6b6;
 }
 
 .header svg.bars {
@@ -95,6 +113,15 @@
 
   .links.show {
     top: 5rem;
+  }
+
+  @keyframes scrollho {
+    0% {
+      height: 5rem;
+    }
+    100% {
+      height: 5rem;
+    }
   }
 }
 
