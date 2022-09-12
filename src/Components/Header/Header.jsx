@@ -1,10 +1,19 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Link, HiLightBulb, FaBars } from "../../Globals/Imports";
 
 import "./Header.css";
 
 export const Header = () => {
   const [toggler, settoggler] = useState(false);
+  const [scroll, setScroll] = useState(false);
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 200) {
+      setScroll(true);
+    } else {
+      setScroll(false);
+    }
+  });
 
   const handleOnClick = () => {
     console.log("dark mode enabled");
@@ -33,29 +42,16 @@ export const Header = () => {
     },
   ];
 
-  useEffect(() => {
-    window.addEventListener("scroll", () => {
-      const header = document.getElementById("header");
-      const links = document.querySelectorAll(".links a");
-      if (window.scrollY >= 200) {
-        header.style.background = "rgba(2, 2, 120, 0.8)";
-        links.forEach((link) => {
-          link.style.color = "white";
-          link.style.fontWeight = "400";
-        });
-      } else {
-        header.style.backgroundColor = "transparent";
-        links.forEach((link) => {
-          link.style.color = "black";
-          link.style.fontWeight = "600";
-        });
-      }
-    });
-  }, []);
-
   return (
     <>
-      <div className="header flex align-item-center" id="header">
+      <div
+        className={
+          scroll === true
+            ? "header flex align-item-center changed-bg"
+            : "header flex align-item-center"
+        }
+        id="header"
+      >
         <ul
           className={
             toggler === true
