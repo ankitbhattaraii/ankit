@@ -49,9 +49,7 @@ export const Home = () => {
           </div>
         </div>
       </div>
-      {/* <RecentWork /> */}
       <Skills />
-      {/* <ProjectSection /> */}
       <Footer />
     </>
   );
