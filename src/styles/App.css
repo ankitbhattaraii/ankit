@@ -6,3 +6,7 @@
   width: 100%;
   min-height: 100vh;
 }
+
+.container-dark h1 {
+  color: aliceblue;
+}

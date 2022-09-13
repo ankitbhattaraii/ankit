@@ -1,3 +1,17 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.container-dark {
+  background-color: #313449;
+  color: white;
+}
+
+.container-light {
+  background-color: transparent;
+}
+
 .home {
   width: 100%;
   height: 100vh;
@@ -33,6 +47,11 @@
   color: rgb(6, 6, 132);
 }
 
+.container-dark .Typewriter__cursor,
+.container-dark .Typewriter__wrapper {
+  color: rgb(255 0 52);
+}
+
 .hero-div p {
   width: 90%;
   font-weight: 400;
@@ -40,6 +59,10 @@
   line-height: 2.4rem;
   margin: 0 0 5rem 0;
   letter-spacing: 1px;
+}
+
+.container-dark .hero-div p {
+  color: rgb(216, 214, 214);
 }
 
 .hero-div button {
@@ -87,6 +110,14 @@
   box-shadow: 4rem 4rem 1.5rem 1rem silver;
 }
 
+.container-dark .img {
+  box-shadow: 2rem 3rem 2rem 1rem rgb(40, 39, 39);
+}
+
+.container-dark .img:hover {
+  box-shadow: 4rem 4rem 1.5rem 1rem rgb(40, 39, 39);
+}
+
 @media (max-width: 900px) {
   .home {
     flex-direction: column-reverse;
@@ -121,7 +152,8 @@
     margin: 0;
   }
 
-  .img {
+  .img,
+  .container-dark .img {
     margin: 0;
     height: 230px;
     width: 230px;
@@ -130,8 +162,8 @@
     box-shadow: 0rem 0rem 0rem 0rem white;
   }
 
-  .hero-image .img:hover {
-    scale: 1.05;
+  .hero-image .img:hover,
+  .container-dark .img:hover {
     box-shadow: 0rem 0rem 0rem 0rem white;
   }
 

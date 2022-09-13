@@ -5,17 +5,16 @@ const Footer = () => {
   const data = {
     discription: "created by",
     link: "https://ujjwalbhandarii.com.np",
+    link2: "",
     name: "Ujjwal",
-    name2: "ankit",
+    name2: "Ankit",
   };
   return (
     <div className="footer flex-al-jc-center">
       {
         <h1>
-          {data.discription}{" "}
-          <a href={data.link}>
-            {data.name} & {data.name2}
-          </a>
+          {data.discription} <a href={data.link}>{data.name}</a> &{" "}
+          <a href={data.link2}>{data.name2}</a>
         </h1>
       }
     </div>

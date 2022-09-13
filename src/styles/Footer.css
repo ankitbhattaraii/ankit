@@ -3,3 +3,11 @@
   width: 100%;
   background: rgba(84, 83, 83, 0.1);
 }
+
+.container-dark .footer h1 {
+  color: aliceblue;
+}
+
+.container-dark .footer a {
+  color: wheat;
+}

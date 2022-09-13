@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link, HiLightBulb, FaBars } from "../../Globals/Imports";
-
+import { DarkModeContext } from "../DarkModeContext";
 import "./Header.css";
 
 export const Header = () => {
@@ -17,10 +17,6 @@ export const Header = () => {
 
   const LinksClicked = () => {
     settoggler(!toggler);
-  };
-
-  const handleOnClick = () => {
-    console.log("dark mode enabled");
   };
 
   let data = [
@@ -46,6 +42,12 @@ export const Header = () => {
     },
   ];
 
+  const { toggleDarkmode } = useContext(DarkModeContext);
+
+  const handleOnClick = () => {
+    toggleDarkmode();
+  };
+
   return (
     <>
       <div
@@ -70,7 +72,12 @@ export const Header = () => {
               </Link>
             );
           })}
-          <HiLightBulb onClick={handleOnClick} />
+          <HiLightBulb
+            onClick={() => {
+              handleOnClick();
+              LinksClicked();
+            }}
+          />
         </ul>
         <FaBars
           className="bars"
