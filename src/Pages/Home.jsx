@@ -3,6 +3,8 @@ import Typewriter from "typewriter-effect";
 import Footer from "../Components/Footer";
 import { DP, Skills, Header } from "../Globals/Imports";
 import "../styles/Home.css";
+import { DarkModeContext } from "../Components/DarkModeContext";
+import { useContext } from "react";
 
 export const Home = () => {
   new Typewriter("#typewriter", {
@@ -21,36 +23,44 @@ export const Home = () => {
     btn_text: "Download Resume",
   };
 
+  const { darkMode } = useContext(DarkModeContext);
+
   return (
     <>
-      <Header />
-      <div className="home flex-al-jc-center">
-        <div className="hero-div-wrapper flex align-item-center">
-          <div className="hero-div flex justify-content-center">
-            <h1>
-              Hi, I am {data.name}, <br /> a
-              <span className="h1-span">
-                <Typewriter
-                  options={{
-                    strings: [data.skill_1, data.skill_2, data.skill_3],
-                    autoStart: true,
-                    loop: true,
-                  }}
-                />
-              </span>
-            </h1>
-            <p>{data.description}</p>
-            <button>{data.btn_text}</button>
-          </div>
-          <div className="hero-image flex-al-jc-center ">
-            <div className="img">
-              <img src={DP.url} alt="ujjwal" />
+      <div
+        className={
+          darkMode ? `container container-dark` : `container container-light`
+        }
+      >
+        <Header />
+        <div className="home flex-al-jc-center">
+          <div className="hero-div-wrapper flex align-item-center">
+            <div className="hero-div flex justify-content-center">
+              <h1>
+                Hi, I am {data.name}, <br /> a
+                <span className="h1-span">
+                  <Typewriter
+                    options={{
+                      strings: [data.skill_1, data.skill_2, data.skill_3],
+                      autoStart: true,
+                      loop: true,
+                    }}
+                  />
+                </span>
+              </h1>
+              <p>{data.description}</p>
+              <button>{data.btn_text}</button>
+            </div>
+            <div className="hero-image flex-al-jc-center ">
+              <div className="img">
+                <img src={DP.url} alt="ujjwal" />
+              </div>
             </div>
           </div>
         </div>
+        <Skills />
+        <Footer />
       </div>
-      <Skills />
-      <Footer />
     </>
   );
 };

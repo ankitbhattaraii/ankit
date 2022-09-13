@@ -40,6 +40,10 @@
   border-radius: 0.5rem;
 }
 
+.container-dark .header a {
+  color: white;
+}
+
 .header a:hover {
   color: #424141;
   background-color: rgba(0, 0, 0, 0.1);
@@ -65,7 +69,6 @@
 }
 
 .header svg:hover {
-  /* background: rgba(198, 196, 196, 0.2); */
   background-color: #b6b6b6;
 }
 
