@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import {
   Router,
   Home,
@@ -7,23 +7,38 @@ import {
   Header,
   Blog,
   Contact,
+  DarkModeProvider,
+  BounceLoader,
 } from "./Globals/Imports";
 import "./styles/App.css";
-import { DarkModeProvider } from "./Components/DarkModeContext";
 
 function App() {
+  const [loaderr, setloaderr] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setloaderr(false);
+    }, 3000);
+  });
+
   return (
     <>
-      <Router>
-        <DarkModeProvider>
-          <Header />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/blog" element={<Blog />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
-        </DarkModeProvider>
-      </Router>
+      {loaderr ? (
+        <div className="app">
+          <BounceLoader loading={loaderr} size={200} color="blueviolet" />
+        </div>
+      ) : (
+        <Router>
+          <DarkModeProvider>
+            <Header />
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/contact" element={<Contact />} />
+            </Routes>
+          </DarkModeProvider>
+        </Router>
+      )}
     </>
   );
 }
