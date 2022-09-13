@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import Typewriter from "typewriter-effect";
-import Footer from "../Components/Footer";
-import { DP, Skills, Header } from "../Globals/Imports";
+import {
+  DP,
+  Skills,
+  Header,
+  DarkModeContext,
+  Footer,
+} from "../Globals/Imports";
 import "../styles/Home.css";
-import { DarkModeContext } from "../Components/DarkModeContext";
-import { useContext } from "react";
 
 export const Home = () => {
   new Typewriter("#typewriter", {

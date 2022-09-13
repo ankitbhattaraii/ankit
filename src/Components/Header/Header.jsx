@@ -1,6 +1,10 @@
 import React, { useContext, useState } from "react";
-import { Link, HiLightBulb, FaBars } from "../../Globals/Imports";
-import { DarkModeContext } from "../DarkModeContext";
+import {
+  Link,
+  HiLightBulb,
+  FaBars,
+  DarkModeContext,
+} from "../../Globals/Imports";
 import "./Header.css";
 
 export const Header = () => {
@@ -19,34 +23,11 @@ export const Header = () => {
     settoggler(!toggler);
   };
 
-  let data = [
-    {
-      link: "home",
-      path: "/",
-    },
-    {
-      link: "skills",
-      path: "/skills",
-    },
-    {
-      link: "projects",
-      path: "/projects",
-    },
-    {
-      link: "contact",
-      path: "/contact",
-    },
-    {
-      link: "blog",
-      path: "/blog",
-    },
-  ];
-
-  const { toggleDarkmode } = useContext(DarkModeContext);
-
   const handleOnClick = () => {
     toggleDarkmode();
   };
+
+  const { toggleDarkmode } = useContext(DarkModeContext);
 
   return (
     <>
@@ -89,3 +70,26 @@ export const Header = () => {
     </>
   );
 };
+
+let data = [
+  {
+    link: "home",
+    path: "/",
+  },
+  {
+    link: "skills",
+    path: "/skills",
+  },
+  {
+    link: "projects",
+    path: "/projects",
+  },
+  {
+    link: "contact",
+    path: "/contact",
+  },
+  {
+    link: "blog",
+    path: "/blog",
+  },
+];

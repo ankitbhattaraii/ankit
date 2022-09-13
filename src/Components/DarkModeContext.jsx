@@ -1,9 +1,16 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useState, useEffect } from "react";
 
 const DarkModeContext = createContext();
 
 const DarkModeProvider = (props) => {
-  const [darkMode, setDarkmode] = useState(false);
+  const themeGetter = () => {
+    return JSON.parse(localStorage.getItem("mode")) || false;
+  };
+  const [darkMode, setDarkmode] = useState(themeGetter());
+
+  useEffect(() => {
+    localStorage.setItem("mode", JSON.stringify(darkMode));
+  }, [darkMode]);
 
   const toggleDarkmode = () => {
     setDarkmode(!darkMode);
