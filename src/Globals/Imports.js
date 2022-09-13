@@ -2,6 +2,7 @@
 export { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 // components
+// export { default as Loader } from "../Components/Loader";
 export { Header } from "../Components/Header/Header";
 export { RecentWork } from "../Components/RecentWork";
 export { default as Skills } from "../Components/Skills";
@@ -28,3 +29,6 @@ export { HiLightBulb } from "react-icons/hi";
 export const DP = {
   url: require("../Assets/DP1.jpg"),
 };
+
+// loader
+export { default as BounceLoader } from "react-spinners/BounceLoader";

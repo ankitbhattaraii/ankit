@@ -6,6 +6,8 @@
   position: fixed;
   transition: 0.2s ease-in;
   z-index: 999;
+  top: 0;
+  right: 0;
 }
 
 .header.changed-bg {
