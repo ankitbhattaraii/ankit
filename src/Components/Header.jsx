@@ -1,11 +1,6 @@
 import React, { useContext, useState } from "react";
-import {
-  Link,
-  HiLightBulb,
-  FaBars,
-  DarkModeContext,
-} from "../../Globals/Imports";
-import "./Header.css";
+import { Link, HiLightBulb, FaBars, DarkModeContext } from "../Globals/Imports";
+import "../styles/Header.css";
 
 export const Header = () => {
   const [toggler, settoggler] = useState(false);

@@ -1,0 +1,142 @@
+.project-card {
+  padding: 1rem 0;
+  margin: 5rem 0;
+  display: flex;
+}
+
+.project-left,
+.project-right {
+  margin: 1rem;
+}
+
+.project-left {
+  height: 50rem;
+  width: 30rem;
+  overflow: hidden;
+}
+
+.project-left img {
+  height: 100%;
+  width: 120%;
+  background: center no-repeat center/cover;
+  transition: 0.3s ease;
+}
+
+.right-up-img img:hover {
+  scale: 1.1;
+}
+
+.project-left img:hover {
+  scale: 1.1;
+}
+
+.project-right {
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-right .project-right-up {
+  display: flex;
+  gap: 1rem;
+  height: 25rem;
+  overflow: hidden;
+}
+
+.right-up-img {
+  overflow: hidden;
+}
+
+.project-right-up img {
+  width: 26.7rem;
+  background: center no-repeat center/cover;
+  transition: 0.3s ease;
+}
+
+.project-right-bottom {
+  overflow: hidden;
+  width: 54.5rem;
+  height: 24rem;
+}
+
+.project-right-bottom img {
+  background: center no-repeat center/cover;
+  height: 130%;
+  width: 100%;
+  transition: 0.3s ease;
+}
+
+.project-right-bottom img:hover {
+  scale: 1.1;
+}
+
+@media (max-width: 700px) {
+  .project-card {
+    flex-direction: column;
+  }
+
+  .project-left {
+    width: 40rem;
+    height: 33rem;
+    margin: 0 auto;
+  }
+
+  .project-left img {
+    height: 130%;
+    width: 90%;
+  }
+
+  .project-right .project-right-up {
+    flex-direction: column;
+    height: 66rem;
+  }
+
+  .project-right-up img {
+    width: 36rem;
+  }
+
+  .project-right-bottom {
+    /* display: none; */
+    height: 33rem;
+    width: 38rem;
+  }
+
+  .project-right-bottom img {
+    height: 100%;
+    width: 36rem;
+  }
+}
+
+@media (max-width: 410px) {
+  .project-left {
+    width: 35rem;
+    height: 30rem;
+    margin: 0 auto;
+  }
+
+  .project-left img {
+    height: 130%;
+    width: 90%;
+  }
+
+  .project-right .project-right-up {
+    flex-direction: column;
+    height: 66rem;
+    margin: 0 auto;
+  }
+
+  .project-right-up img {
+    width: 32rem;
+    margin: 0 auto;
+  }
+
+  .project-right-bottom {
+    height: 33rem;
+    width: 32rem;
+    margin: 0 auto;
+  }
+
+  .project-right-bottom img {
+    width: 130%;
+  }
+}
