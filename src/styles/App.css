@@ -1,12 +1,40 @@
-.app {
+.loader {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   width: 100%;
   min-height: 100vh;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.inner-div {
+  animation: zoomed 3s linear;
+  overflow: hidden infinite;
 }
 
 .container-dark h1 {
   color: aliceblue;
+}
+
+@keyframes zoomed {
+  0% {
+    scale: 1;
+    opacity: 0;
+  }
+  25% {
+    scale: 1.4;
+  }
+  50% {
+    scale: 0.8;
+  }
+  70% {
+    scale: 1.4;
+    opacity: 0.8;
+  }
+  100% {
+    scale: 0.8;
+    opacity: 0;
+  }
 }
