@@ -31,4 +31,4 @@ export const DP = {
 };
 
 // loader
-export { default as BounceLoader } from "react-spinners/BounceLoader";
+export { default as ClimbingBoxLoader } from "react-spinners/ClimbingBoxLoader";

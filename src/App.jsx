@@ -8,7 +8,7 @@ import {
   Blog,
   Contact,
   DarkModeProvider,
-  BounceLoader,
+  ClimbingBoxLoader,
 } from "./Globals/Imports";
 import "./styles/App.css";
 
@@ -18,14 +18,16 @@ function App() {
   useEffect(() => {
     setTimeout(() => {
       setloaderr(false);
-    }, 3000);
+    }, 2800);
   });
 
   return (
     <>
       {loaderr ? (
-        <div className="app">
-          <BounceLoader loading={loaderr} size={200} color="blueviolet" />
+        <div className="loader">
+          <div className="inner-div">
+            <ClimbingBoxLoader loading={loaderr} size={30} color="blueviolet" />
+          </div>
         </div>
       ) : (
         <Router>
