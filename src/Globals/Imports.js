@@ -9,7 +9,8 @@ export { default as Skills } from "../Components/Skills";
 export { default as Projects } from "../Components/Projects";
 export { default as ProjectCard } from "../Components/ProjectCard";
 export { default as Blog } from "../Pages/Blog";
-export { default as Contact } from "../Pages/Contact";
+// export { default as Contact } from "../Pages/Contact";
+export { default as Contact } from "../Components/Contact";
 export { default as Footer } from "../Components/Footer";
 
 export {
