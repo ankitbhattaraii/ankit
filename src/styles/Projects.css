@@ -1,6 +1,7 @@
 .projects {
   padding: 8rem 0;
-  /* background-color: #d8d7dd; */
+  background-color: #d8d7dd;
+  background-color: rgb(41, 40, 40);
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -14,15 +15,17 @@
   letter-spacing: 2px;
   line-height: 6rem;
   /* background-color: aqua; */
-  color: rgb(49, 49, 49);
+  /* color: rgb(49, 49, 49); */
+  color: white;
 }
 
 .projects > p {
   font-size: 1.5rem;
-  /* opacity: 0.7; */
-  font-weight: 500;
+  opacity: 0.7;
+  font-weight: 400;
   /* background-color: aqua; */
   display: inline;
   line-height: 3rem;
   color: rgb(99, 98, 98);
+  color: white;
 }

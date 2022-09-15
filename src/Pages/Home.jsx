@@ -6,6 +6,7 @@ import {
   Header,
   DarkModeContext,
   Projects,
+  Contact,
   Footer,
 } from "../Globals/Imports";
 import "../styles/Home.css";
@@ -64,6 +65,7 @@ export const Home = () => {
         </div>
         <Skills />
         <Projects />
+        <Contact />
         <Footer />
       </div>
     </>

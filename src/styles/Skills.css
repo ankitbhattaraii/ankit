@@ -1,8 +1,15 @@
 .skills {
   flex-direction: column;
-  border-top: 0.1px solid rgba(0, 0, 0, 0.2);
-  border-bottom: 0.1px solid rgba(0, 0, 0, 0.2);
+  /* border-top: 0.1px solid rgba(0, 0, 0, 0.2);
+  border-bottom: 0.1px solid rgba(0, 0, 0, 0.2); */
   padding: 8rem 0 5rem 0;
+  /* background-color: #f6f2fa; */
+  /* background-color: #d8d7dd; */
+}
+
+.container-dark .skills {
+  /* background-color: #30334f; */
+  color: white;
 }
 
 .skills h1 {
